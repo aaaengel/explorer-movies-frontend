@@ -1,0 +1,117 @@
+.aboutproject{
+    height:608px;
+    display:flex;
+}
+
+.aboutproject__container{
+    max-width: 1280px;
+    margin: auto;
+    margin-top:110px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutproject__text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+    color:black;
+}
+
+.aboutproject__container-line{
+    max-width: 1140px;
+    height:1px;
+    border-top: 1px solid black;
+}
+
+.aboutproject__text-container{
+    max-width: 1140px;
+    margin-top: 70px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.aboutproject__text-container__text{
+    max-width: 550px;
+}
+.aboutproject__text-container__header{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 26px;
+}
+.aboutproject__text-container__words{
+    margin: 0;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.aboutproject__progress-bar{
+   max-width: 1080px;
+   margin-top:110px;
+   display: flex;
+   flex-direction: row;
+}
+
+.aboutproject__progress-bar_backend{
+    width: 20%;
+    height: 36px;
+    background: #2BE080;
+    display: flex;
+}
+
+.aboutproject__progress-bar_text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin:auto;
+}
+
+.aboutproject__progress-bar_frontend{
+    width: 80%;
+    height: 36px;
+    display: flex;
+    background: #F2F2F2;
+}
+
+.aboutproject__progress-bar-and-caption_backend{
+    display: flex;
+   flex-direction: row;
+}
+.aboutproject__captions{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 110px;
+}
+
+.aboutproject__captions_backend{
+    width:20%;
+    display: flex;
+}
+
+.aboutproject__captions_text{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color:#A0A0A0;
+    margin: auto;
+    margin-top: 14px;
+}
+
+.aboutproject__captions_frontend{
+    width:80%;
+    display: flex;
+}

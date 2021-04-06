@@ -1,0 +1,134 @@
+.movies__search{
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+.movies__search-form{
+    margin:auto;
+    margin-right:41px;
+    display: flex;
+    justify-content: center;
+    height: 48px;
+    position: relative;
+    flex-direction: row;
+}
+.movies__input{
+    width:75vw;
+    text-indent: 22px;
+    border: 1px solid #E8E8E8;
+    border-radius: 20px;
+    outline:none;
+}
+.movies__search-icon{
+    background-color: white;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 6px;
+    right: 0.5%;
+    padding:0;
+}
+.movies__input::placeholder{
+   text-indent: 22px;
+   font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #A0A0A0;
+}
+
+
+.movies__search-icon__image{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.movies__search-icon:hover{
+    cursor: pointer;
+    
+}
+
+.movies__checkbox{
+    display: none;
+}
+
+.movies__checkbox-label{
+    display: flex;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+    height: max-content;
+    width: max-content;
+}
+
+.movies__checkbox + .movies__checkbox-label{
+    cursor: pointer;
+    padding-left: 50px;
+    position: relative;
+    margin-right:5%;
+    margin-top: 15px;
+}
+
+.movies__checkbox + .movies__checkbox-label::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    vertical-align: middle;
+    padding: 0;
+    height: 20px;
+    width: 36px;
+    margin: 0 5px 0 0;
+    border: 1px solid #dadada;
+    border-radius: 12px;
+    background: #dddddd;
+}
+
+.movies__checkbox + .movies__checkbox-label::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    width: 16px;
+    height: 16px;
+    border-radius: 22px;
+    background: #fff;
+    border: 1px solid #dadada;
+    box-shadow: 0 3px 3px rgba(140, 140, 140, .1);
+}
+
+.movies__checkbox + .movies__checkbox-label::before,
+.movies__checkbox + .movies__checkbox-label::after {
+    transition: all .2s ease-out;
+}
+
+.movies__checkbox:checked + .movies__checkbox-label::before {
+    background: #2BE080;
+    border-color: #2BE080;
+}
+
+.movies__checkbox:checked + .movies__checkbox-label::after {
+    left: 18px;
+}
+
+@media screen and (max-width:768px) {
+    .movies__search{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .movies__search-form{
+        margin:auto;
+        margin-bottom:23px;
+    }
+
+   
+}
