@@ -17,6 +17,10 @@ function MoviesCardList(){
           <MoviesCard />
           <MoviesCard />
           <MoviesCard />
+          <MoviesCard />
+          <MoviesCard />
+          <MoviesCard />
+          <MoviesCard />
         </div>
         <button className="movies__more-button">Еще</button>
       </section>
