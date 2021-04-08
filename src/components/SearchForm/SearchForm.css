@@ -1,12 +1,11 @@
 .movies__search{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 80px;
 }
 
 .movies__search-form{
     margin:auto;
-    margin-right:41px;
     display: flex;
     justify-content: center;
     height: 48px;
@@ -16,9 +15,12 @@
 .movies__input{
     width:75vw;
     text-indent: 22px;
-    border: 1px solid #E8E8E8;
-    border-radius: 20px;
+    border:none;
+    border-bottom: 1px solid #E8E8E8;
     outline:none;
+    text-align: center;
+    font-family: inter;
+    font-size: 25px;
 }
 .movies__search-icon{
     background-color: white;
@@ -26,16 +28,35 @@
     border: none;
     position: absolute;
     top: 6px;
-    right: 0.5%;
+    left: 0.5%;
     padding:0;
 }
+
+.movies__search-icon_right{
+    background-color:#FF6838;
+    position: absolute;
+    top: 6px;
+    right: 0.5%;
+    width:55px;
+    height:34px;
+    padding:0;
+    outline: none;
+    border: none;
+    border-radius: 48px;
+    color:white;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+}
+
 .movies__input::placeholder{
-   text-indent: 22px;
    font-family: Inter;
     font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
     color: #A0A0A0;
 }
 
@@ -70,8 +91,8 @@
     cursor: pointer;
     padding-left: 50px;
     position: relative;
-    margin-right:5%;
-    margin-top: 15px;
+    margin: auto;
+    margin-top: 30px;
 }
 
 .movies__checkbox + .movies__checkbox-label::before{

@@ -1,5 +1,5 @@
 .header{
-    background-color:#073042;
+    background-color:white;
     display: flex;
     flex-direction: row;
     height: 74px;
@@ -30,7 +30,7 @@
 }
 
 .header__button_register{
-    color: white;
+    color: black;
     margin-right:30px;
     opacity: 1;
     transition: opacity 0.5s;

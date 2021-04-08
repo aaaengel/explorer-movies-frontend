@@ -1,33 +1,40 @@
 .navtab{
-    background-color: black;
     height: 66px;
     display: flex;
 }
 
 .navtab__link-container{
     margin: auto;
+    display: flex;
+    flex-direction: row;
 }
 
 .navtab__link-container_link{
-    color: white;
+    color: black;
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
     line-height: 16px;
-    margin-right:40px;
     letter-spacing: 1px;
+    text-decoration: none;
+    margin:auto;
+}
+
+.navtab__link-container_block{
+    background: #E8E8E8;
+    height: 36px;
+    width: 4vw;
+    border:none;
+    border-radius:10px;
     opacity:1;
     transition: opacity 0.5s ;
+    display: flex;
+    margin-right:40px;
 }
-.navtab__link-container_link:hover{
+
+.navtab__link-container_block:hover{
     cursor: pointer;
     opacity:0.5;
     transition: opacity 0.5s;
-    animation: stretching 1.5s infinite;
-}
-@keyframes stretching{
-    0%{ letter-spacing: 1px;}
-    50%{letter-spacing: 3px;}
-    0%{ letter-spacing: 1px;}
 }

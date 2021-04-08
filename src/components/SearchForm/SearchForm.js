@@ -6,9 +6,14 @@ function SearchForm(){
     return(
         <div className="movies__search">
         <form className="movies__search-form">
+          <button type="submit" className="movies__search-icon">
+            <img src={icon} alt="search" className="movies__search-icon__image" />
+          </button>
           <input placeholder="Фильм" type="search" className="movies__input" />
-          <button type="submit" className="movies__search-icon"><img src={icon} alt="search" className="movies__search-icon__image" /></button>
-        </form>
+          <button type="submit" className="movies__search-icon_right">
+            Найти
+          </button>
+          </form>
         <input type="checkbox" className="movies__checkbox" id="checkbox1"></input>
         <label for="checkbox1" className="movies__checkbox-label">Короткометражки</label>
       </div>
