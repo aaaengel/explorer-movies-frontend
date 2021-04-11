@@ -1,6 +1,7 @@
 .navtab{
     height: 66px;
     display: flex;
+    background: #272727;
 }
 
 .navtab__link-container{
@@ -10,19 +11,18 @@
 }
 
 .navtab__link-container_link{
-    color: black;
+    color: white;
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
     line-height: 16px;
     letter-spacing: 1px;
-    text-decoration: none;
+    text-decoration: underline;
     margin:auto;
 }
 
 .navtab__link-container_block{
-    background: #E8E8E8;
     height: 36px;
     width: 4vw;
     border:none;

@@ -4,6 +4,7 @@ function Footer() {
 
     return (
     <div className ="footer">
+        <div className ="footer__container">
        <p className="footer__text">Учебный проект Яндекс.Практикум х BeatFilm.</p>
        <div className="footer__container-line" />
        <div className="footer__container__caption-and-links">
@@ -13,6 +14,7 @@ function Footer() {
                 <a className="footer__container__link" href="https://github.com/aaaengel?tab=repositories">Github</a>
                 <a className="footer__container__link" href="https://vk.com/dengel1999">VK</a>
             </div>
+       </div>
        </div>
     </div>
         );

@@ -1,13 +1,11 @@
     .promo{
-        background: #F5F5F5;
+        background-color:#073042;
         height: 524px;
         display: flex;
         background-image: url("../../images/promo.svg");
         background-repeat: no-repeat;
         background-position: center;
-        width:94%;
         margin:auto;
-        border-radius:10px;
         flex-direction: column;
     }
 
@@ -17,7 +15,7 @@
         font-weight: normal;
         font-size: 50px;
         line-height: 58px;
-        color: black;
+        color: white;
         margin:auto;
         max-width: 730px;
         text-align: center;

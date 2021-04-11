@@ -1,5 +1,7 @@
 .aboutme{
     display:flex;
+    background: #202020;
+    color: white;
 }
 
 .aboutme__container{
@@ -13,7 +15,7 @@
 .aboutme__container-line{
     max-width: 1140px;
     height:1px;
-    border-top: 1px solid black;
+    border-top: 1px solid white;
 }
 
 .aboutme__text{
@@ -22,7 +24,6 @@
     font-weight: normal;
     font-size: 22px;
     line-height: 27px;
-    color:black;
 }
 
 .aboutme__container_description-and-photo{
@@ -72,7 +73,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    color:black;
+    color:white;
     text-decoration: none;
     opacity: 1;
     transition: opacity 0.5s;

@@ -1,5 +1,5 @@
 import "./Header.css";
-import headerLogo from "../../images/registerLogo.svg";
+import headerLogo from "../../images/MainLogo.svg";
 import { Link } from "react-router-dom";
 
 function Header() {

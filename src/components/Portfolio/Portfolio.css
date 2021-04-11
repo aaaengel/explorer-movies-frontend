@@ -1,6 +1,8 @@
 .portfolio{
     display:flex;
     flex-direction: column;
+    background: #202020;
+    padding-bottom: 125px;
 }
 
 .portfolio__header{
@@ -29,7 +31,7 @@
 }
 
 .portfolio__container__link_text{
-    color: black;
+    color: white;
     text-decoration: none;
     font-family: Inter;
     font-style: normal;

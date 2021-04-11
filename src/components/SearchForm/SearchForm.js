@@ -1,4 +1,3 @@
-import icon from "../../images/findIcon.svg";
 import "./SearchForm.css";
 
 function SearchForm(){
@@ -6,9 +5,6 @@ function SearchForm(){
     return(
         <div className="movies__search">
         <form className="movies__search-form">
-          <button type="submit" className="movies__search-icon">
-            <img src={icon} alt="search" className="movies__search-icon__image" />
-          </button>
           <input placeholder="Фильм" type="search" className="movies__input" />
           <button type="submit" className="movies__search-icon_right">
             Найти

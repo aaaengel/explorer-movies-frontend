@@ -23,11 +23,16 @@
     line-height: 15px;
     align-items: center;
     text-align: center;
-    color: #000000;
+    color: white;
     font-style: normal;
     text-align: center;
     cursor:pointer;
     border: none;
+    border-radius: 6px;
     outline: none;
     margin-bottom: 80px;
+    width: 100%;
+    max-width:320px;
+    margin:auto;
+    background-color: #2F2F2F;
 }

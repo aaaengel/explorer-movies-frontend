@@ -3,10 +3,12 @@
     width: 100%;
     justify-content: space-between;
     flex-direction: row;
+    background: #202020;
+    color: white;
 }
 .protected-header__image{
     margin-top: 29px;
-    margin-left: 5%;
+    margin-left: 5vw;
 }
 
 .protected-header__navigation{
@@ -25,6 +27,7 @@
     background-color: inherit;
     padding:0;
     margin-left: 20px;
+    color: white;
 }
 
 .protected-header__link_saved-films{
@@ -36,23 +39,37 @@
 }
 
 .protected-header__link_account{
-    margin-left: 50px;
+    margin-left: 5px;
+    margin-right: 8px;
 }
 
 .protected-header__account-icon{
-    margin-left:17px;
-    margin-top: 13px;
-    margin-right: 70px;
+    margin:auto;
+    margin-left: 8px;
+}
+
+.protected-header__profile-link{
+    border: 2px solid grey;
+    border-radius: 48px;
+    margin-left: 50px;
+    margin-right: 5vw;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.protected-header__link_films:hover{
+    cursor: pointer;
+    animation: rotation 2s infinite;
 }
 
 .protected-header__link:hover{
-    cursor: pointer;
-    animation: rotation 2s ease infinite;
+ cursor: pointer;
 }
 
-.protected-header__account-icon:hover{
+.protected-header__profile-link:hover{
     cursor: pointer;
-    animation: scaleAccount 2s ease infinite;
+    opacity: 0.5;
+    transition: opacity 1s ease;
 }
 
 .protected-header__menu-logo{

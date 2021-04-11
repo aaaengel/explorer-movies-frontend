@@ -1,9 +1,15 @@
 .footer{
+    background: #202020;
+    display:flex;
+    color: white;
+}
+.footer__container{
     width:90%;
     margin:auto;
     padding-top: 79px;
     display: flex;
     flex-direction: column;
+    background: #202020;
 }
 
 .footer__text{
@@ -43,7 +49,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    color:black;
+    color:white;
     text-decoration: none;
     opacity: 1;
     transition: opacity 0.5s;

@@ -1,6 +1,8 @@
 .aboutproject{
     height:608px;
     display:flex;
+    background: #202020;
+    color:white;
 }
 
 .aboutproject__container{
@@ -17,13 +19,12 @@
     font-weight: normal;
     font-size: 22px;
     line-height: 27px;
-    color:black;
 }
 
 .aboutproject__container-line{
     max-width: 1140px;
     height:1px;
-    border-top: 1px solid black;
+    border-top: 1px solid white;
 }
 
 .aboutproject__text-container{
@@ -79,15 +80,16 @@
 }
 
 .aboutproject__progress-bar_frontend{
-    width: 80%;
+    width:80%;
     height: 36px;
     display: flex;
-    background: #F2F2F2;
+    background: #303030;
 }
 
 .aboutproject__progress-bar-and-caption_backend{
     display: flex;
    flex-direction: row;
+
 }
 .aboutproject__captions{
     display:flex;
@@ -97,6 +99,7 @@
 
 .aboutproject__captions_backend{
     width:20%;
+    max-width:216px;
     display: flex;
 }
 
@@ -114,4 +117,5 @@
 .aboutproject__captions_frontend{
     width:80%;
     display: flex;
+    max-width:864px;
 }

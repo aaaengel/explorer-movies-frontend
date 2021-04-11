@@ -1,7 +1,7 @@
 import "./MoviesCard.css";
-import iconLike from "../../images/MovieSaveIcon.svg";
-import MovieSaved from "../../images/MovieSaved.svg";
-import iconDelete from "../../images/deleteIcon.svg";
+import iconLike from "../../images/save8d.svg";
+import MovieSaved from "../../images/save8.svg";
+import iconDelete from "../../images/d8.svg";
 import testImage from "../../images/papich.jpg";
 import { Route } from "react-router-dom";
 import  React from "react";
@@ -17,6 +17,7 @@ function MoviesCard({image, title}) {
     }
     return (
     <div className="movie"> 
+    <img src={testImage} alt={title} className="movie__image" />
         <div className="movie__container">
             <div className="movie__like-button_and_caption">
                 <p className="movie__like-caption">{title}тест</p>
@@ -33,7 +34,6 @@ function MoviesCard({image, title}) {
                     </button>
                 </Route>
         </div>
-        <img src={testImage} alt={title} className="movie__image" />
     </div>
     );
   }

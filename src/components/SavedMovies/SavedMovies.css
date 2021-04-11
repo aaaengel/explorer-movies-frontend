@@ -1,3 +1,7 @@
+.movies{
+    background: #202020;
+}
+
 .movies__container-line{
     width: 90%;
     height:1px;
