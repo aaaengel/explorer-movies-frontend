@@ -58,3 +58,14 @@
     opacity: 0.5;
     transition: opacity 0.5s ease;
 }
+
+@media screen and (max-width:500px) {
+    .portfolio__container__link_text{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.04em;
+    }
+}

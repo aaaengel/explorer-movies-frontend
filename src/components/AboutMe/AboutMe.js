@@ -9,6 +9,7 @@ function AboutMe() {
         <p className="aboutme__text">Студент</p>
         <div className="aboutme__container-line" />
         <div className="aboutme__container_description-and-photo">
+            <img className="aboutme__container_image" src={myAvatar} alt="me" />
             <div className="aboutme__container_description">
                 <h2 className="aboutme__container_description_name">Данила</h2>
                 <p className="aboutme__container_description_caption">Фронтенд-разработчик, 16 лет</p>
@@ -20,7 +21,6 @@ function AboutMe() {
                     <a className="aboutme__container_description_link" href="https://github.com/aaaengel?tab=repositories">Github</a>
                 </div>
             </div>
-            <img className="aboutme__container_image" src={myAvatar} alt="me" />
         </div>
         </div>
     </div>

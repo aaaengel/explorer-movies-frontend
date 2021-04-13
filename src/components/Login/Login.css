@@ -35,10 +35,10 @@
 }
 
 .login__header__logo-and-welcome-container{
-    max-width: 396px;
-    margin-left:35%;
+    width: 396px;
     display: flex;
     flex-direction: column;
+    margin:auto;
 }
 
 .login__form{
@@ -88,13 +88,13 @@
 .login__button{
     margin:auto;
     margin-top: 69px;
-    width: 31vw;
     max-width: 396px;
     height: 46px;
     border: none;
     border-radius: 3px;
     background: #4285F4;
     margin-top: 179px;
+    width: 100vw;
 }
 
 .login__button-text{
@@ -192,5 +192,20 @@
     100%{
         transform: rotate(0deg);
         color: #3456f3;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .login__button{
+        max-width: 260px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .login__header__logo-and-welcome-container{
+        width:90%;
+        justify-content: center;
+        align-items: center;
     }
 }

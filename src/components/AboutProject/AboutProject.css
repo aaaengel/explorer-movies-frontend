@@ -1,5 +1,4 @@
 .aboutproject{
-    height:608px;
     display:flex;
     background: #202020;
     color:white;
@@ -118,4 +117,45 @@
     width:80%;
     display: flex;
     max-width:864px;
+}
+
+.aboutproject__progress-bar_text_backend{
+    color: black;
+}
+
+@media screen and (max-width: 700px){
+    .aboutproject__text-container{
+        flex-direction: column;
+    }
+    .aboutproject__text-container__words_deadlines{
+        margin-top: 56px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .aboutproject__text-container__words{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .aboutproject__text-container__header{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -0.04em;
+    }
+
+    .aboutproject__container{
+        width: 90%;
+        margin: auto;
+        margin-top:110px;
+        display: flex;
+        flex-direction: column;
+    }
 }

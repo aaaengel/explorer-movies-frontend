@@ -20,6 +20,8 @@
 .profile__info{
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    max-width: 410px;
     margin:auto;
     margin-bottom: 0;
     margin-top:123px;
@@ -29,7 +31,7 @@
     flex-direction: row;
     margin:auto;
     margin-top: 0;
-    width:30vw;
+    width:100vw;
     max-width:410px;
     justify-content: space-between;
     margin-bottom: 16px;
@@ -135,5 +137,15 @@
         transform: scale(1);
         border:3px solid #3456F3;
         border-radius: 10px;
+    }
+}
+
+@media screen and (max-width:450px){
+    .profile__name{
+        max-width:260px;
+    }
+
+    .profile__info{
+        max-width: 260px;
     }
 }

@@ -55,3 +55,9 @@
     opacity: 0.5;
     transition: opacity 0.5s;
 }
+
+@media screen and (max-width: 600PX) {
+    .header__content-container{
+        padding:0 14px;
+    }
+}
