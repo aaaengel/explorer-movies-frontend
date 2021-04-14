@@ -27,7 +27,7 @@
     background: #4285F4;
     position: absolute;
     top: 6px;
-    right: 0.5%;
+    right: 6px ;
     width:55px;
     height:34px;
     padding:0;
@@ -137,4 +137,8 @@
     }
 
    
+}
+
+@media screen and (max-width: 1200px){
+    
 }
