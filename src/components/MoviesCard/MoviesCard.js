@@ -17,7 +17,7 @@ function MoviesCard({image, title}) {
     }
     return (
     <div className="movie"> 
-    <img src={testImage} alt={title} className="movie__image" />
+    <img src={testImage} alt="test" className="movie__image" />
         <div className="movie__container">
             <div className="movie__like-button_and_caption">
                 <p className="movie__like-caption">{title}тест</p>
