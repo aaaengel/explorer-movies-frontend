@@ -76,6 +76,14 @@
 }
 
 .login__input-error{
+    display: none;
+    
+}
+
+.login__input-error_open{
+    display: flex;
+    max-width:300px;
+    flex-wrap:wrap;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -151,6 +159,22 @@
 
 .login__input::placeholder{
     text-indent: 22px;
+}
+
+.login__button_disabled{
+    width: 100vw;
+    margin:auto;
+    margin-top: 69px;
+    max-width: 396px;
+    height: 46px;
+    border: 2px solid grey;
+    border-radius: 3px;
+    background-color: inherit;
+    margin-top: 179px;
+    color: grey;
+}
+.login__button_disabled:hover{ 
+    animation: none
 }
 
 @keyframes scale{

@@ -1,8 +1,20 @@
 import "./Login.css";
 import logo from "../../images/MainLogo.svg";
 import { Link } from "react-router-dom";
+import React from "react";
+import useFormWithValidation from "../../utils/Validation/Validator";
 
-function Login() {
+function Login({onLogin}) {
+const {
+  values, handleChange, errors, isValid, resetForm
+} = useFormWithValidation()
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onLogin(values);
+    resetForm()
+  };
+
     return (
       <div className="login">
           <div className="login__header">
@@ -11,22 +23,20 @@ function Login() {
                 <p className="login__header__welcome">Рады видеть!</p>
               </div>
           </div>
-          <form className="login__form">
+          <form className="login__form" onSubmit={handleSubmit}>
               <div className="login__input-container">
                     <label className="login__input__label" >E-mail</label>
-                    <input className="login__input" type="text" required />
-                    <span className="login__input-error"></span>
+                    <input className="login__input" type="email" required name="email" onChange={handleChange} />
+                    <span className={!errors.email ? "login__input-error" : "login__input-error_open"}>{errors.email}</span>
               </div>
               <div className="login__input-container" typeof="text">
                     <label className="login__input__label">Пароль</label>
-                    <input className="login__input" type="password" required />
-                    <span className="login__input-error"></span>
+                    <input name="password" className="login__input" type="password" required onChange={handleChange} />
+                    <span className={!errors.password ? "register__input-error" : "register__input-error_open"}>{errors.password}</span>
               </div>
-              <Link to="/profile">
-                <button className="login__button">
-                        <p className="login__button-text">Войти</p>
-                </button>
-              </Link>
+             <button className={isValid ? "login__button" : "login__button_disabled"}>
+                <p className="login__button-text" onSubmit={handleSubmit}>Войти</p>
+            </button>
               <div className="login__underbutton">
                 <p className="login__underbutton-text">Ещё не зарегистрированы?</p>
                 <Link to="/signup" className="login__underbutton-link-container">

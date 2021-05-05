@@ -51,6 +51,10 @@
     font-weight: normal;
     font-size: 11px;
     line-height: 13px;
+    text-align:right;
+    color: white;
+    background-color: inherit;
+    border: none;
 }
 
 .profile__container-line{

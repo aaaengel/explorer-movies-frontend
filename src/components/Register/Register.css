@@ -62,6 +62,7 @@
     outline: none;
     background-color: inherit;
     text-indent: 22px;
+    margin-bottom: 10px;
 }
 
 .register__input__label{
@@ -76,6 +77,13 @@
 }
 
 .register__input-error{
+    display: none;
+    
+}
+
+.register__input-error_open{
+    display: flex;
+    flex-wrap: wrap;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -83,6 +91,7 @@
     line-height: 12px;
     color: #FF3055;
     margin-bottom: 20px;
+    max-width:300px;
 }
 
 .register__button{
@@ -95,6 +104,19 @@
     border-radius: 3px;
     background-color: #4285F4;
     margin-top: 179px;
+}
+
+.register__button_disabled{
+    width: 100vw;
+    margin:auto;
+    margin-top: 69px;
+    max-width: 396px;
+    height: 46px;
+    border: 2px solid grey;
+    border-radius: 3px;
+    background-color: inherit;
+    margin-top: 179px;
+    color: grey;
 }
 
 .register__button-text{
@@ -165,4 +187,8 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+.register__button_disabled:hover{ 
+    animation: none
 }
