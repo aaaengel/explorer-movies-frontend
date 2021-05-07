@@ -22,7 +22,6 @@ function App() {
   const [loggedIn, setState] = React.useState(false);
   const [currentUser, setCurrentUser] = React.useState({});
   const [movies, setMovies] = React.useState([]);
-  const [initMovies, setInitMovies] = React.useState(false);
   const [savedMovies, setSavedMovies] = React.useState([]);
   const history = useHistory();
 
@@ -45,7 +44,6 @@ function App() {
     if (loggedIn === true) {
       if (localStorage.getItem('movies')) {
         setMovies(JSON.parse(localStorage.getItem('movies')));
-        setInitMovies(!initMovies);
         saveMovies()
       }
       if (localStorage.getItem('saved-movies')) {
