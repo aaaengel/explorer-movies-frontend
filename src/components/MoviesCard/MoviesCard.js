@@ -59,7 +59,7 @@ function MoviesCard({card, key, onDelete, savedMovies, saveMovies}) {
         <div className="movie__container">
             <div className="movie__like-button_and_caption">
                 <p className="movie__like-caption">{card.nameRU}</p>
-                <p className="movie__time-caption">1ч42м</p>
+                <p className="movie__time-caption">{Math.floor(card.duration / 60) !== 0 ? `${Math.floor(card.duration / 60)}ч` : ""}{card.duration % 60 !== 0 ? `${card.duration % 60}м` : ""}</p>
             </div>
             <Route exact path="/movies">
                     <button className="movie__like-button" type="button" >

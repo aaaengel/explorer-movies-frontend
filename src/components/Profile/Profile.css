@@ -97,6 +97,41 @@
     transition: opacity 0.5s ease;
 }
 
+.profile__button-container__button_disabled{
+    opacity: 0.5;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    border: 0;
+    outline: none;
+    background-color: inherit;
+    margin: 0;
+    margin-bottom: 16px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    color: grey;
+}
+
+.profile__input-error{
+    display: none;
+    
+}
+
+.profile__input-error_open{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FF3055;
+    margin-bottom: 20px;
+    max-width:300px;
+}
+
 @keyframes rotation{
     0%{
         transform: rotate(0deg);

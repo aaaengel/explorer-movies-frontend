@@ -4,11 +4,11 @@ import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import Footer from "../Footer/Footer";
 
-function Movies({onFindMovies, movies, savedMovies, saveMovies, onDelete}) {
+function Movies({onFindMovies, movies, savedMovies, saveMovies, onDelete, filterMovies, unFilterFilms}) {
     return (
     <div class="movies">
       <ProtectedHeader />
-      <SearchForm onSubmit={onFindMovies}  movies={movies} />
+      <SearchForm onSubmit={onFindMovies} filterMovies={filterMovies} unFilterFilms={unFilterFilms} movies={movies} />
       <div className="movies__container-line" />
       <MoviesCardList movies={movies} saveMovies={saveMovies} onDelete={onDelete} savedMovies={savedMovies} />
       <Footer />

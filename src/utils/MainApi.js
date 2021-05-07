@@ -21,9 +21,6 @@ export class MainApi{
             }
             return Promise.reject(`Ошибка: ${res.status}`)
         })
-        .catch((err) => {
-            console.log(err)
-        })
         }
         
         createMovie({
@@ -65,9 +62,6 @@ export class MainApi{
             }
             return Promise.reject(`Ошибка: ${res.status}`)
         })
-        .catch((err) => {
-            console.log(err)
-        })
         }
 
         deleteMovies(id) {
@@ -84,9 +78,6 @@ export class MainApi{
                 return res.json();
             }
             return Promise.reject(`Ошибка: ${res.status}`)
-        })
-        .catch((err) => {
-            console.log(err)
         })
           }
 
@@ -106,7 +97,6 @@ export class MainApi{
                 console.log(res)
                 return res;
               })
-              .catch((err) => console.log(err));
           }
 
           authorize(email, password){
@@ -124,7 +114,6 @@ export class MainApi{
                     return data;
                 } 
                 })
-            .catch(err => console.log(err))
             }
 
             getUserData(){
@@ -142,9 +131,7 @@ export class MainApi{
                 }
                 return Promise.reject(`Ошибка: ${res.status}`)
             })
-            .catch((err) => {
-                console.log(err)
-            })
+        
             }
             setUserData(data){
                 this._token = localStorage.getItem('jwt');
@@ -165,9 +152,7 @@ export class MainApi{
                 }
                 return Promise.reject(`Ошибка: ${res.status}`)
             })
-            .catch((err) => {
-                console.log(err)
-            })
+        
             }
         }
 

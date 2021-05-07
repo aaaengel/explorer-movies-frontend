@@ -20,38 +20,24 @@ import CurrentUserContext from "../../contexts/CurrentUserContext";
 
 function App() {
   const [loggedIn, setState] = React.useState(false);
-  const [token, setToken] = React.useState('');
   const [currentUser, setCurrentUser] = React.useState({});
-  const [message, setMessage] = React.useState('');
-  const [isInfoTooltipPopupOpen, setInfoTooltipPopupOpen] = React.useState(false);
-  const [initialization, setInitialization] = React.useState(false);
-  const [isInformPopupOpen, setInformPopupOpen] = React.useState(false);
   const [movies, setMovies] = React.useState([]);
   const [initMovies, setInitMovies] = React.useState(false);
-  const [initSavedMovies, setInitSavedMovies] = React.useState(false);
   const [savedMovies, setSavedMovies] = React.useState([]);
   const history = useHistory();
 
   function checkAuthorize() {
     const jwt = localStorage.getItem('jwt');
-    if (jwt) {    
-      setToken(jwt);
+    if (jwt) { 
       MainApi.getUserData()
       .then((data) => {
         setCurrentUser(data);
         setState(true);
-        history.push("/profile");
+        history.push("/movies");
       })
       .catch((err) => {
-        setMessage(err);
-        setInfoTooltipPopupOpen(true);
+        console.log(err)
       })
-      .finally(() => {
-        setInitialization(true);
-      })
-    } else {
-      setInformPopupOpen(true);
-      setInitialization(true);
     }
   }
 
@@ -72,8 +58,10 @@ function App() {
   
   function registerHandler(data) {
     const password = data.password;
+    
     MainApi.register(data)
     .then((data) => {
+      alert("Вы успешно зарегестрировались")
       const user = { 
         email: data.email,
         password: password
@@ -81,8 +69,8 @@ function App() {
       handleLogin(user)
     })
     .catch((err) => {
-      setMessage(err);
-      setInfoTooltipPopupOpen(true);
+      console.log(err)
+      alert("Произошла ошибка, попробуйте еще раз!")
     });
   }
 
@@ -135,22 +123,22 @@ function App() {
       .then((data) => {
         if(data.token){
           setState(true)
-            history.push("/profile")
+            history.push("/movies")
           }
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        console.log(err)
+        alert("Произошла ошибка, попробуйте еще раз!")
+      });
   }
 
   function handleEditUser(userData) {
     MainApi.setUserData(userData)
     .then((userData) => {
       setCurrentUser(userData);
-      setMessage('Профиль успешно изменен!');
-      setInfoTooltipPopupOpen(true);
     })
     .catch((err) => {
-      setMessage(err);
-      setInfoTooltipPopupOpen(true);
+      console.log(err)
     });
   }
   function handleSignOut() {
@@ -161,20 +149,32 @@ function App() {
 function handleDeleteMovieCard(savedMovieId){
   console.log(savedMovies)
   console.log(savedMovieId)
-  const id = savedMovies.find(item => item.id === savedMovieId)._id;
+  const id = savedMovies.find(item => item.id === savedMovieId.toString())._id;
   MainApi.deleteMovies(id)
     .then(() => {
       setSavedMovies(prev => prev.filter(item => item._id !== id));
     })
     .catch((err) => {
-        history.push("/error");
+        console.log(err)
       },
     )
 };
+function filterShortFilms(){
+  const filteredMovies = movies.filter(movie => movie.duration <= 50)
+  console.log(filteredMovies);
+  setMovies(filteredMovies);
+  return filteredMovies;
+}
+function unFilterShortFilms(){
+  setMovies(JSON.parse(localStorage.getItem('movies')));
+}
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="app">
+        <Route exact path="*">
+            <Redirect to="/" />
+        </Route>
         <Route exact path="/">
             <Header />
             <Main />
@@ -187,7 +187,7 @@ function handleDeleteMovieCard(savedMovieId){
             <Login onLogin={handleLogin} />
           </Route>
             <Route exact path="/movies">
-              <ProtectedRoute component={Movies} loggedIn={loggedIn} onDelete={handleDeleteMovieCard} onFindMovies={findMovies} savedMovies={savedMovies} saveMovies={saveMovies} movies={movies} redirect="/"/>
+              <ProtectedRoute component={Movies} unFilterFilms={unFilterShortFilms} filterMovies={filterShortFilms} loggedIn={loggedIn} onDelete={handleDeleteMovieCard} onFindMovies={findMovies} savedMovies={savedMovies} saveMovies={saveMovies} movies={movies} redirect="/"/>
             </Route>
             <Route exact path="/saved-movies">
               <ProtectedRoute component={SavedMovies} savedMovies={savedMovies} loggedIn={loggedIn} movies={savedMovies} saveMovies={saveMovies} onDelete={handleDeleteMovieCard} redirect="/"/>
