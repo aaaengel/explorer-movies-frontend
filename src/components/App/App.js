@@ -24,7 +24,19 @@ function App() {
   const [movies, setMovies] = React.useState([]);
   const [savedMovies, setSavedMovies] = React.useState([]);
   const history = useHistory();
-
+React.useEffect(() => {
+    if (loggedIn === true) {
+      if (localStorage.getItem('movies')) {
+        setMovies(JSON.parse(localStorage.getItem('movies')));
+        saveMovies()
+      }
+      if (localStorage.getItem('saved-movies')) {
+        saveMovies()
+      }
+    } else {
+      checkAuthorize();
+    }
+  }, [loggedIn]);
   function checkAuthorize() {
     const jwt = localStorage.getItem('jwt');
     if (jwt) { 
@@ -39,20 +51,6 @@ function App() {
       })
     }
   }
-
-  React.useEffect(() => {
-    if (loggedIn === true) {
-      if (localStorage.getItem('movies')) {
-        setMovies(JSON.parse(localStorage.getItem('movies')));
-        saveMovies()
-      }
-      if (localStorage.getItem('saved-movies')) {
-        saveMovies()
-      }
-    } else {
-      checkAuthorize();
-    }
-  }, [loggedIn]);
   
   function registerHandler(data) {
     const password = data.password;
