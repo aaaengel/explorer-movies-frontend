@@ -158,5 +158,5 @@ export class MainApi{
         }
 
 
- const api = new MainApi("https://aaaengeldip.students.nomoredomains.icu")
+ const api = new MainApi("https://api.aaaengeldip.students.nomoredomains.icu")
  export default api;
