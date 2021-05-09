@@ -7,9 +7,8 @@ import useFormWithValidation from "../../utils/Validation/Validator"
 
 function Profile({onSignOut, onUpdateProfile}) {
 const currentUser = React.useContext(CurrentUserContext)
-React.useEffect(() =>{
-    console.log(currentUser)
-})  
+console.log(currentUser)
+
 
 const {
     values, handleChange, errors, isValid

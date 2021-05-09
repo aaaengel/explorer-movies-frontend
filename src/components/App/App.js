@@ -119,7 +119,11 @@ React.useEffect(() => {
       .then((data) => {
         if(data.token){
           setState(true)
-            history.push("/movies")
+          MainApi.getUserData()
+          .then((data) => {
+            setCurrentUser(data);
+          })
+          history.push("/movies")
           }
       })
       .catch(err => {
@@ -143,9 +147,9 @@ React.useEffect(() => {
 }
 
 function handleDeleteMovieCard(savedMovieId){
-  console.log(savedMovies)
-  console.log(savedMovieId)
   const id = savedMovies.find(item => item.id === savedMovieId.toString())._id;
+  MainApi.getMovies()
+  .then(res => console.log(res))
   MainApi.deleteMovies(id)
     .then(() => {
       setSavedMovies(prev => prev.filter(item => item._id !== id));

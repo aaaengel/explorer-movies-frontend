@@ -66,6 +66,7 @@ export class MainApi{
 
         deleteMovies(id) {
             this._token = localStorage.getItem('jwt');
+            console.log(id)
             return fetch(this._url + `/movies/${id}`, {
                 method: "DELETE",
                 headers: {
@@ -157,5 +158,5 @@ export class MainApi{
         }
 
 
- const api = new MainApi("https://api.aaaengeldip.students.nomoredomains.icu")
+ const api = new MainApi("https://aaaengeldip.students.nomoredomains.icu")
  export default api;
